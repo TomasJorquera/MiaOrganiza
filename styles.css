@@ -1,9 +1,10 @@
+/* Estilos generales */
 body {
   font-family: 'Arial', sans-serif;
   background: #f9f4ef;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,60 +12,100 @@ body {
 
 .profile-card {
   background: #fff;
-  width: 100%;
+  width: 90%;
   max-width: 400px;
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  margin: 20px auto;
 }
 
-
+/* Logo */
 .logo-container {
   margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  overflow: hidden;
 }
 
 .logo-img {
-  width: 150px;
-  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  width: auto;
 }
 
+/* Imagen del gato */
 .profile-img {
   width: 100%;
-  height: auto;
+  max-height: 250px;
   border-radius: 12px;
   margin-top: 10px;
+  object-fit: cover;
 }
 
+/* Textos */
 h1 {
-  margin: 0;
+  margin: 10px 0;
   color: #3e3e3e;
+  font-size: 1.8rem;
 }
 
 .subtitle {
   color: #777;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  font-size: 1rem;
 }
 
 .info {
   margin: 15px 0;
-  font-size: 16px;
+  font-size: 0.95rem;
   text-align: left;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
+/* Secciones */
 .section {
   margin-top: 20px;
   text-align: left;
 }
 
 .section h3 {
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #eee;
   padding-bottom: 5px;
   margin-bottom: 10px;
   color: #555;
+  font-size: 1.1rem;
 }
 
 ul {
   padding-left: 20px;
+  font-size: 0.9rem;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+/* Responsive para móviles */
+@media (max-width: 480px) {
+  .profile-card {
+    padding: 15px;
+    width: 85%;
+  }
+  
+  .logo-container {
+    height: 70px;
+  }
+  
+  .profile-img {
+    max-height: 200px;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
 }
